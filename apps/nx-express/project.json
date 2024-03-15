@@ -1,0 +1,24 @@
+{
+  "name": "nx-express",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nx-express/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nx-express:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nx-express:build:development"
+        },
+        "production": {
+          "buildTarget": "nx-express:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
